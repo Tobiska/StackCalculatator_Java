@@ -1,0 +1,6 @@
+# hhhhhhhhhhhhhhh
+DEFINE a 13
+PUSH a
+SQRT
+# rrrrrrrrrrrrrrrrrrrrrrrrrr
+PRINT

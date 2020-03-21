@@ -1,0 +1,10 @@
+#TEST PLUS
+DEFINE a 4
+PUSH a
+PUSH 4
+PUSH 3
+PUSH 2
++
++
++
+#13

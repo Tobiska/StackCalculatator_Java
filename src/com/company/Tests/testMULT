@@ -1,0 +1,15 @@
+#TEST_MULT
+PUSH 0.33
+PUSH 8
+PUSH 0.5
+PUSH 3
+PUSH 2
+PUSH 1
+PUSH 1
+*
+*
+*
+*
+*
+*
+#1*1*2*3*0,5*8*0,33=8

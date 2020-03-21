@@ -1,0 +1,5 @@
+#TEST_FR_TZ
+DEFINE a 4
+PUSH a
+SQRT
+#2
