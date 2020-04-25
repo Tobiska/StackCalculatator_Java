@@ -1,10 +1,15 @@
 package com.company.Tests;
 
+import com.company.CException.DEVIDE_Exception;
+import com.company.Context;
+import com.company.DIVIDE;
 import com.company.Main;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
 
@@ -120,5 +125,18 @@ public class MainTest {
     }
 
 
+    @Test
+    public void TEST_Exeption(){
+        Context context = new Context();
+        ArrayList<String> arrayList = new ArrayList<String>();
+        context.PUSH(0.0);
+        context.PUSH(1.0);
+        DIVIDE dev = new DIVIDE();
+        Exception ex = assertThrows(DEVIDE_Exception.class,() ->dev.perform(context,arrayList));
+
+        assertNotNull(ex.getMessage());
+
+
+    }
 
 }

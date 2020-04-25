@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.CException.CalculateException;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
@@ -15,7 +17,7 @@ public class Cfactory {
 
     private String filename = "C:\\Users\\kiril\\IdeaProjects\\StackCalculatator(Factory)\\src\\com\\company\\Properties";
 
-    public Cfactory()  {
+    public Cfactory() throws Exception {
         try(FileReader fr = new FileReader(filename);Scanner scan = new Scanner(fr)) {
 
             while(scan.hasNextLine()) {
@@ -23,6 +25,7 @@ public class Cfactory {
             }
 
         }catch (Exception ex) {
+            throw ex;
         }
     }
 
@@ -31,7 +34,7 @@ public class Cfactory {
             Class<?> a = prop.get(key);
             return (ICalculate) a.getConstructor().newInstance();
         }else {
-            return null;
+            throw new CalculateException("Unkown key");//return null;
         }
     }
 

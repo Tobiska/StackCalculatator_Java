@@ -25,7 +25,6 @@ public class Main {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             log.log(Level.WARNING,ex.getMessage(),ex);
-            //System.out.println(e.getNumberAction());
         }
         return 0;
     }

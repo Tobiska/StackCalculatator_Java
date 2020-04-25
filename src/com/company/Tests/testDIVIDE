@@ -1,4 +1,4 @@
-#TEST PLUS
+# TEST PLUS
 DEFINE a 4
 PUSH a
 PUSH 2
@@ -7,4 +7,4 @@ PUSH 2
 /
 /
 /
-#0.125
+# 0.125

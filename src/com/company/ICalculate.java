@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public interface ICalculate {
 
-    public Context perform(Context context, ArrayList<String> args);
+    public Context perform(Context context, ArrayList<String> args)throws Exception;
 
 
 }

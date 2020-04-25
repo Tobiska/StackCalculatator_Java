@@ -11,17 +11,15 @@ public class SQRT implements ICalculate {
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
     @Override
-    public Context perform(Context context, ArrayList<String> args){
+    public Context perform(Context context, ArrayList<String> args)throws Exception{
             Double a =context.POP();
-            try {
                 if (a < 0) {
                     throw new SQRT_Exception("negative number under the sqrt");
                 }
                 Double res = Math.sqrt(a);
                 context.PUSH(res);
                 log.info(res+" "+"divided");
-            }catch(SQRT_Exception Ex){
-            }
+
         return context;
     }
 }
