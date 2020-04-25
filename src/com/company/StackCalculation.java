@@ -5,6 +5,7 @@ import com.company.CException.CalculateException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class StackCalculation {
@@ -47,7 +48,8 @@ public class StackCalculation {
                 try {
                     this.context = it_factory.getKey().perform(context, it_factory.getValue());
                 }catch(Exception ex){
-
+                    System.out.println(ex.getMessage());
+                    log.log(Level.WARNING,ex.getMessage(),ex);
                 }
             }
 
